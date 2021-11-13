@@ -8,7 +8,7 @@ then
   echo "maven 已安装: $mvn_installed"
 else
   echo "准备安装 Apache Maven 3.6.3 ..."
-
+  # wget https://mirror.bit.edu.cn/apache/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz
   wget http://lhsaq2009.oss-cn-hangzhou.aliyuncs.com/file/apache-maven-3.6.3-bin.tar.gz
   tar -zvxf apache-maven-3.6.3-bin.tar.gz
   sudo mkdir -p /usr/local/bin/maven3 && sudo cp -R ./apache-maven-3.6.3/* /usr/local/bin/maven3
@@ -19,5 +19,5 @@ else
   source ~/.bash_profile
 
   echo "安装成功: Apache Maven 3.6.3"
-
+  echo "提示：mvn 配置文件：vim ~/.m2/settings.xml"
 fi
